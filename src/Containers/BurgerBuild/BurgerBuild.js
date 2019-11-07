@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Auxiliary';
 import Burger from '../../Components/Burger/Burger';
 import Modal from '../../Components/UI/Modal/Modal';
 import BuildControls from '../../Components/Burger/BuildControls/BuildControls';
@@ -37,6 +37,7 @@ class BurgerBuild extends Component  {
             }, 0);
         this.setState({purchasable: sum > 0});
     }
+
     addIngredientHandler = (type) => {
         const oldCount = this.state.ingredients[type];
         const updatedCount = oldCount + 1;
