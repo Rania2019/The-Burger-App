@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Aux from '../../hoc/Auxiliary';
+import Auxiliary from '../../hoc/Auxiliary';
 import Burger from '../../Components/Burger/Burger';
 import Modal from '../../Components/UI/Modal/Modal';
 import BuildControls from '../../Components/Burger/BuildControls/BuildControls';
@@ -91,7 +91,7 @@ render() {
     }
     // {salad: true, meat:false,.....}
     return (
-        <Aux>
+        <Auxiliary>
             <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
                 <OrderSummary 
                     ingredients={this.state.ingredients}
@@ -108,7 +108,7 @@ render() {
                 ordered={this.purchaseHandler}
                 price={this.state.totalPrice}
                 />
-        </Aux>
+        </Auxiliary>
     );
 }
 }
